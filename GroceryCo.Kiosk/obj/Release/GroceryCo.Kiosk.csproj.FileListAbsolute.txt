@@ -1,8 +1,0 @@
-D:\Documents\OneDrive - Southern Alberta Institute of Technology\Job\Absorb Software\Coding Excercise\GroceryCo\GroceryCo\bin\Release\GroceryCo.exe.config
-D:\Documents\OneDrive - Southern Alberta Institute of Technology\Job\Absorb Software\Coding Excercise\GroceryCo\GroceryCo\bin\Release\GroceryCo.exe
-D:\Documents\OneDrive - Southern Alberta Institute of Technology\Job\Absorb Software\Coding Excercise\GroceryCo\GroceryCo\bin\Release\GroceryCo.pdb
-D:\Documents\OneDrive - Southern Alberta Institute of Technology\Job\Absorb Software\Coding Excercise\GroceryCo\GroceryCo\bin\Release\System.Data.SQLite.dll
-D:\Documents\OneDrive - Southern Alberta Institute of Technology\Job\Absorb Software\Coding Excercise\GroceryCo\GroceryCo\bin\Release\System.Data.SQLite.xml
-D:\Documents\OneDrive - Southern Alberta Institute of Technology\Job\Absorb Software\Coding Excercise\GroceryCo\GroceryCo\obj\Release\GroceryCo.Kiosk.csprojResolveAssemblyReference.cache
-D:\Documents\OneDrive - Southern Alberta Institute of Technology\Job\Absorb Software\Coding Excercise\GroceryCo\GroceryCo\obj\Release\GroceryCo.exe
-D:\Documents\OneDrive - Southern Alberta Institute of Technology\Job\Absorb Software\Coding Excercise\GroceryCo\GroceryCo\obj\Release\GroceryCo.pdb

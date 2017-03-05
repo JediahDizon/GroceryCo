@@ -119,6 +119,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dependencies\System.Data.SQLite.dll" />
+    <Content Include="Dependencies\System.Data.SQLite.xml" />
     <Content Include="Resources\Inventory.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
