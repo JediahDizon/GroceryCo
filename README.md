@@ -13,7 +13,10 @@ A metaphorical supermarket company named "GroceryCo" hired a software developer 
 
 ## Documentation
 ### Overview
-This system is based off the MVC pattern and has a Controller class that connects the View and the Model together. The Controller passes around a Product object that contains information about the product being scanned including it's UPC, Name, Price, and Discount if applicable. That product can be used to Show/Add/Modify/Delete the same product from the Model that connects to a Database (SQLite).
+This system is based off the MVC pattern and has a Controller class that connects the View and the Model together. The Controller passes around a Product object that contains information about the product being scanned including it's UPC, Name, Price, and Discount if applicable. That product can be used to Show/Add/Modify/Delete the same product from the Model that connects to a Database.
+
+### Dependencies
+- SQLite - A serverless database used for storing Business Objects.
 
 ## Install
 There's no installation necessary for this. To run the application, follow these steps:
