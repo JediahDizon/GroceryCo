@@ -40,6 +40,14 @@ namespace GroceryCo.Test
 		}
 
 		[TestMethod]
+		public void GetProductByName()
+		{
+			Assert.IsTrue(toCompare1.Equals(controllerInstance.GetProductByName(toCompare1.Name)));
+			Assert.IsTrue(toCompare2.Equals(controllerInstance.GetProductByName(toCompare2.Name)));
+			Assert.IsTrue(toCompare3.Equals(controllerInstance.GetProductByName(toCompare3.Name)));
+		}
+
+		[TestMethod]
 		public void GetAllProducts()
 		{
 			Product[] allProducts = controllerInstance.GetAllProducts();

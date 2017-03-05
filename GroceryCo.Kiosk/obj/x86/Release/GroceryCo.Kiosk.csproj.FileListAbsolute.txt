@@ -9,3 +9,4 @@ D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Kiosk\obj\x86\Release\
 D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Kiosk\obj\x86\Release\GroceryCo.application
 D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Kiosk\obj\x86\Release\GroceryCo.exe
 D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Kiosk\obj\x86\Release\GroceryCo.pdb
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Kiosk\obj\x86\Release\GroceryCo.Kiosk.csprojResolveAssemblyReference.cache

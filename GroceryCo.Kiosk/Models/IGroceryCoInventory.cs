@@ -12,5 +12,6 @@ namespace GroceryCo.Models
 		void RemoveFromInventory(Product toRemove);
 		void EditFromInventory(Product toEdit);
 		Product GetProductByUPC(int productUPC);
+		Product GetProductByName(string productName);
 	}
 }

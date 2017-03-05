@@ -37,9 +37,18 @@ namespace GroceryCo.Controllers
 			viewInstance.PrintWelcomeScreen();
 			foreach (string line in lines)
 			{
-				ScanProductUPC(System.Convert.ToInt32(line));
+				Product toScan = GetProductByName(line);
+				if(toScan == null)
+				{
+					viewInstance.PrintProductNotFound(line);
+				}
+				else
+				{
+					ScanProductUPC(toScan.UPC);
+				}
 			}
 		}
+
 		public void ScanProductUPC(int productUPC)
 		{
 			Product toAdd = modelInstance.GetProductByUPC(productUPC);
@@ -54,6 +63,7 @@ namespace GroceryCo.Controllers
 				viewInstance.PrintProductNotFound(productUPC);
 			}
 		}
+
 		public void VoidItem(int productUPC)
 		{
 			// Item removal is currently out of the project's scope.
@@ -77,7 +87,12 @@ namespace GroceryCo.Controllers
 		{
 			return modelInstance.GetProductByUPC(productUPC);
 		}
-		
+
+		public Product GetProductByName(string productName)
+		{
+			return modelInstance.GetProductByName(productName);
+		}
+
 		public Product[] GetAllProducts()
 		{
 			return modelInstance.GetAllProducts();

@@ -47,7 +47,7 @@ namespace GroceryCo.Views
 			{
 				discountString = string.Format("SALE: {0:0.00} Off", ((float)toPrint.Discount) / 100);
 			}
-			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "} {1:0.00} {2}", toPrint.Name, (float)((toPrint.Price - toPrint.Discount) / 100), discountString));
+			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "} {1:0.00} {2}", toPrint.Name, ((float)toPrint.Price - toPrint.Discount) / 100, discountString));
 		}
 
 		public void PrintVoidItem(Product toPrint)
@@ -55,9 +55,13 @@ namespace GroceryCo.Views
 			// Currently out of project's scope.
 		}
 
+		public void PrintProductNotFound(string productName)
+		{
+			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "} {1}", "Not Found: " + productName, "-"));
+		}
 		public void PrintProductNotFound(int productUPC)
 		{
-			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "} {1}", "N/A", "-"));
+			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "} {1}", "Not Found: " + productUPC, "-"));
 		}
 
 		public void PrintTotal(int purchaseTotal)

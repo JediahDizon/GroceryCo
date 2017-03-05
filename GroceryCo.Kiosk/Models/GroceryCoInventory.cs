@@ -70,6 +70,18 @@ namespace GroceryCo.Models
 			}
 			return null;
 		}
+		public Product GetProductByName(string productName)
+		{
+			sqlQuery = string.Format("SELECT UPC, Name, Price FROM Inventory WHERE Name = '{0}'", productName);
+			sqlCommand = new SQLiteCommand(sqlQuery, databaseConnection);
+			sqlReader = sqlCommand.ExecuteReader();
+			if (sqlReader.HasRows)
+			{
+				sqlReader.Read();
+				return new Product(sqlReader.GetInt32(0), sqlReader.GetString(1), sqlReader.GetInt32(2));
+			}
+			return null;
+		}
 
 		public Product[] GetAllProducts()
 		{
