@@ -5,19 +5,20 @@ A metaphorical supermarket company named "GroceryCo" hired a software developer 
 > - <cite>GroceryCo CEO</cite>
 
 ## Table of Contents
-
-- [Security](#security)
 - [Install](#install)
+- [Security](#security)
 - [Contribute](#contribute)
-
-## Security
-Considering the complexity of a Security that works, its essential to implement a robust security. Otherwise, it's just a waste of time that could have been used for productivity. Knowing this is a timed project, I simply used most of my time to learn C# programming and developing the core functionalities of the system.
 
 ## Install
 There's no installation necessary for this. To run the application, follow these steps:
 - Using a command line, run the `GroceryCo` executable file.
 - It will ask for the directory of the text file that will contain UPC "Bar Codes" that the Kiosk will use to scan. Enter the directory when prompted.
 After that, it should scan through all the UPC codes and gets the appropriate information from a database and prints out a receipt.
+
+## Security
+Considering the complexity of a Security that works, its essential to implement a robust security. Otherwise, it's just a waste of time that could have been used for productivity. Knowing this is a timed project, I simply used most of my time to learn C# programming and developing the core functionalities of the system.
+
+Though I'd admit, I could have atleast done some user-input sanitization.
 
 ## Contribute
 PRs accepted.
