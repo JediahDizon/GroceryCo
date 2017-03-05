@@ -78,12 +78,6 @@
       <Name>GroceryCo.Kiosk</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GroceryCo.Inventory.db" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Inventory.txt" />
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

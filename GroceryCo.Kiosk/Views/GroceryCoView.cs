@@ -45,9 +45,9 @@ namespace GroceryCo.Views
 			string discountString = "";
 			if (toPrint.Discount > 0)
 			{
-				discountString = string.Format("SALE: {0:0.00} Off", toPrint.Discount/100);
+				discountString = string.Format("SALE: {0:0.00} Off", ((float)toPrint.Discount) / 100);
 			}
-			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "} {1:0.00} {2}", toPrint.Name, (float)(toPrint.Price - toPrint.Discount) / 100, discountString));
+			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "} {1:0.00} {2}", toPrint.Name, (float)((toPrint.Price - toPrint.Discount) / 100), discountString));
 		}
 
 		public void PrintVoidItem(Product toPrint)
@@ -64,7 +64,7 @@ namespace GroceryCo.Views
 		{
 			string footerText = "--------------------------------------------------";
 			System.Console.WriteLine("");
-			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "} {1:0.00}", "SUBTOTAL", (float)purchaseTotal / 100));
+			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "} {1:0.00}", "SUBTOTAL", ((float)purchaseTotal) / 100));
 			System.Console.WriteLine(String.Format("{0,-" + (receiptWidth - receiptWidth / 3) + "}", String.Format("{0," + ((receiptWidth + footerText.Length) / 2).ToString() + "}", footerText)));
 		}
 		public void PrintFarewellScreen()

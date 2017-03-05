@@ -66,7 +66,7 @@ namespace GroceryCo.Controllers
 			foreach(Product toCheckout in productList)
 			{
 				modelInstance.DecrementStock(toCheckout);
-				purchaseTotal += toCheckout.Price;
+				purchaseTotal += toCheckout.Price - toCheckout.Discount;
 			}
 			viewInstance.PrintTotal(purchaseTotal);
 			viewInstance.PrintFarewellScreen();

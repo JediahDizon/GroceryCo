@@ -1,0 +1,11 @@
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\bin\Release\GroceryCo.Test.dll
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\bin\Release\GroceryCo.Test.pdb
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\bin\Release\GroceryCo.exe
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\bin\Release\System.Data.SQLite.dll
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\bin\Release\GroceryCo.pdb
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\bin\Release\System.Data.SQLite.xml
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\obj\Release\GroceryCo.Tests.csprojResolveAssemblyReference.cache
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\obj\Release\GroceryCo.Test.dll
+D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Test\obj\Release\GroceryCo.Test.pdb
