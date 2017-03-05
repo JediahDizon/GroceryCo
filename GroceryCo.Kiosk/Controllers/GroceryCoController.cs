@@ -19,7 +19,6 @@ namespace GroceryCo.Controllers
 			{
 				controllerInstance = new GroceryCoController();
 			}
-			viewInstance.PrintWelcomeScreen();
 			return controllerInstance;
 		}
 
@@ -31,6 +30,16 @@ namespace GroceryCo.Controllers
 			modelInstance = GroceryCoInventory.GetInstance("GroceryCo.Inventory.db");
 		}
 
+		public void ReadProductList()
+		{
+			string directoryInput = viewInstance.GetDirectoryInput();
+			string[] lines = System.IO.File.ReadAllLines(System.IO.Path.GetFullPath(directoryInput));
+			viewInstance.PrintWelcomeScreen();
+			foreach (string line in lines)
+			{
+				ScanProductUPC(System.Convert.ToInt32(line));
+			}
+		}
 		public void ScanProductUPC(int productUPC)
 		{
 			Product toAdd = modelInstance.GetProductByUPC(productUPC);

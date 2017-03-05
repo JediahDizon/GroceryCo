@@ -20,9 +20,9 @@ namespace GroceryCo.Models
 			}
 			return modelInstance;
 		}
-		private GroceryCoInventory(string databaseDirectory)
+		private GroceryCoInventory(string databaseFileName)
 		{
-			databaseConnection = new SQLiteConnection("Data Source=" + System.IO.Path.GetFullPath(@"..\..\..\") + "\\Resources\\" + databaseDirectory + "; Version=3;");
+			databaseConnection = new SQLiteConnection("Data Source=" + databaseFileName + "; Version=3;");
 			InitializeDatabase();
 		}
 
@@ -144,7 +144,7 @@ namespace GroceryCo.Models
 		}
 		public void PopulateInventory()
 		{
-			string[] lines = System.IO.File.ReadAllLines(System.IO.Path.GetFullPath(@"..\..\..\") + "\\Resources\\Inventory.txt");
+			string[] lines = System.IO.File.ReadAllLines(System.IO.Path.GetFullPath(@"Resources\Inventory.txt"));
 			foreach (string line in lines)
 			{
 				string[] tokenizedLine = line.Split();
