@@ -2,6 +2,7 @@
 A metaphorical supermarket company named "GroceryCo" hired a software developer to make a kiosk checkout system for their stores. The system lets customers choose to perform a self-checkout so that when they are feeling generous, they can let the people with reduced mobility go to cashiers while they use the system to checkout their items themselves.
 
 > It's 2017! You can never stop the progress of machines!
+
 > -- <cite>GroceryCo CEO</cite>
 
 ## Table of Contents
