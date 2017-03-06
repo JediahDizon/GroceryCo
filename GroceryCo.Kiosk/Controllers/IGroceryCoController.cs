@@ -6,7 +6,7 @@ namespace GroceryCo.Controllers
 	{
 		void ScanProductUPC(int productUPC);
 		void VoidItem(int productUPC);
-		void CheckOut();
+		int CheckOut();
 		Product GetProductByUPC(int productUPC);
 		Product GetProductByName(string productName);
 		Product[] GetAllProducts();

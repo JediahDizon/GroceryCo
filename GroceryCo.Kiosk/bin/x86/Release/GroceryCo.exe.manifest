@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GroceryCo.exe" size="14336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GroceryCo.exe" size="14848">
       <assemblyIdentity name="GroceryCo" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pC8PCnXvrYbRc50LZlfqAWah9CIISBm2KAfE9P3ZB4M=</dsig:DigestValue>
+        <dsig:DigestValue>W1U8i+TMUzesvMQRBzwyUQHVwyqlq3huU4kWd+RAJk4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

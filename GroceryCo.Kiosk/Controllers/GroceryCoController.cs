@@ -28,6 +28,7 @@ namespace GroceryCo.Controllers
 			{
 				controllerInstance = new GroceryCoController();
 			}
+			viewInstance.PrintWelcomeScreen();
 			return controllerInstance;
 		}
 
@@ -53,7 +54,6 @@ namespace GroceryCo.Controllers
 		public void ReadProductList()
 		{
 			string directoryInput = viewInstance.GetDirectoryInput();
-			viewInstance.PrintWelcomeScreen();
 
 			string[] lines = System.IO.File.ReadAllLines(System.IO.Path.GetFullPath(directoryInput));
 			foreach (string line in lines)
@@ -108,11 +108,17 @@ namespace GroceryCo.Controllers
 			}
 		}
 
-		
-		public void CheckOut()
+		/// <summary>
+		/// The <c>CheckOut</c> function retrieves the total of all the products from the <c>Model</c> instance and
+		/// then clears out all necessary resources to prepare for the next customer.
+		/// </summary>
+		/// <returns>The Total of the products that were checked out as cents.</returns>
+		public int CheckOut()
 		{
-			viewInstance.PrintTotal(modelInstance.CheckOut());
+			int checkoutTotal = modelInstance.CheckOut();
+			viewInstance.PrintTotal(checkoutTotal);
 			viewInstance.PrintFarewellScreen();
+			return checkoutTotal;
 		}
 
 		/// <summary>

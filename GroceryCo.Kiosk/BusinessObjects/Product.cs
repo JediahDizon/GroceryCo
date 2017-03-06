@@ -20,54 +20,66 @@ namespace GroceryCo.BusinessObjects
 		{
 			get
 			{
-				return this.productUPC;
+				return productUPC;
 			}
 			set
 			{
-				this.productUPC = value;
+				productUPC = value;
 			}
 		}
 		public string Name
 		{
 			get
 			{
-				return this.productName;
+				return productName;
 			}
 			set
 			{
-				this.productName = value;
+				productName = value;
 			}
 		}
 		public int Price
 		{
 			get
 			{
-				return this.productPrice;
+				return productPrice;
 			}
 			set
 			{
-				this.productPrice = value;
+				productPrice = value;
 			}
 		}
 		public int Discount
 		{
 			get
 			{
-				return this.productDiscount;
+				return productDiscount;
 			}
 			set
 			{
-				this.productDiscount = value;
+				productDiscount = value;
 			}
 		}
-
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+		public override bool Equals(object obj)
+		{
+			if (obj == null)
+			{
+				return false;
+			}
+			Product toCompare = (Product)obj;
+			return UPC == toCompare.UPC && Name.Equals(toCompare.Name) && Price == toCompare.Price;
+		}
 		public bool Equals(Product toCompare)
 		{
-			if(this.UPC == toCompare.UPC && this.Name.Equals(toCompare.Name) && this.Price == toCompare.Price)
+			if (toCompare == null)
 			{
-				return true;
+				return false;
 			}
-			return false;
+			return UPC == toCompare.UPC && Name.Equals(toCompare.Name) && Price == toCompare.Price;
 		}
 	}
 }

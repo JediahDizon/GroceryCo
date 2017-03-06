@@ -68,7 +68,7 @@ namespace GroceryCo.Views
 
 		public void PrintVoidItem(Product toPrint)
 		{
-			// Currently out of project's scope.
+			System.Console.WriteLine(string.Format("{0,-5}{1,-20}{2,10:###.00}", toPrint.UPC, "VOID " + toPrint.Name, -((float)toPrint.Price - toPrint.Discount) / 100));
 		}
 
 		public void PrintProductNotFound(string productName)
@@ -77,7 +77,7 @@ namespace GroceryCo.Views
 		}
 		public void PrintProductNotFound(int productUPC)
 		{
-			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth / 2) + "} {1}", "Not Found: " + productUPC, "-"));
+			System.Console.WriteLine(string.Format("{0,-" + (receiptWidth / 2) + "}", "Not Found: " + productUPC));
 		}
 
 		public void PrintTotal(int purchaseTotal)

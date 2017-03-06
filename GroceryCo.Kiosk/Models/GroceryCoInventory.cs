@@ -12,13 +12,14 @@ namespace GroceryCo.Models
 	/// </summary>
 	class GroceryCoInventory : IGroceryCoInventory
 	{
+		private static GroceryCoInventory modelInstance;
+		private ArrayList productList;
+		private Promo productPromo;
+
 		private SQLiteConnection databaseConnection;
 		private string sqlQuery;
 		private SQLiteCommand sqlCommand;
 		private SQLiteDataReader sqlReader;
-		private static GroceryCoInventory modelInstance;
-		private ArrayList productList;
-		private Promo productPromo;
 
 		/// <summary>
 		/// The <c>GetInstane</c> method enforces a singleton pattern that prevents multiple connection
@@ -205,9 +206,10 @@ namespace GroceryCo.Models
 			int toRemoveIndex = productList.LastIndexOf(toRemove);
 			if (toRemoveIndex >= 0)
 			{
+				Product toReturn = (Product) productList[toRemoveIndex];
 				productPromo.RemoveDiscount(toRemove);
 				productList.RemoveAt(toRemoveIndex);
-				return toRemove;
+				return toReturn;
 			}
 			return null;
 		}
