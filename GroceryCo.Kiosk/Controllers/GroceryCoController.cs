@@ -41,6 +41,10 @@ namespace GroceryCo.Controllers
 			modelInstance = GroceryCoInventory.GetInstance("GroceryCo.Inventory.db");
 		}
 
+		/// <summary>
+		/// The <c>ShowMainMenu</c> is the starting point for people who will extend from this application. It allows
+		/// the user to make various selections on the available options, as well as check out items from a text file.
+		/// </summary>
 		public void ShowMainMenu()
 		{
 			int menuChoice;

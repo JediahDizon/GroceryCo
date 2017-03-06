@@ -4,6 +4,7 @@ namespace GroceryCo.Controllers
 {
 	interface IGroceryCoController
 	{
+		void ShowMainMenu()
 		void ScanProductUPC(int productUPC);
 		void VoidItem(int productUPC);
 		int CheckOut();
