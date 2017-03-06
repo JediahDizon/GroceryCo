@@ -33,7 +33,7 @@ Since the Database will be empty in the beginning, the program will create a new
 The Database will contain 1 table with the fields `UPC`, `Name`, `Price`, `Count`.
 
 ### Testing
-![Test Results](Images/Test Results.png)
+![Test Results](Images/Test Results.PNG)
 
 
 ## Install
