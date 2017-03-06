@@ -22,6 +22,16 @@ This system is based off the MVC pattern and has a Controller class that connect
 - Model View Controller Pattern
 - Since this system will be implemented on a single Kiosk machine and will only be operated by a single person at a time, the Singleton Pattern is implemented to enforce a single instance of each of the MVC component to prevent anything using the system to allow having multiple components to exist in a single Kiosk.
 
+### Database Schema
+Since the Database will be empty in the beginning, the program will create a new database, save the schema in the program root, and name it as `GroceryCo.Inventory.db`. Afterwards, it populates it using the `Inventory.txt` located in the root of the program. In the end, the file structure should be the same as the following:
+```
+- GroceryCo.exe
+  - GroceryCo.Inventory.db
+  - Inventory.txt
+  - System.Data.SQLite.dll
+```
+The Database will contain 1 table with the fields `UPC`, `Name`, `Price`, `Count`.
+
 ## Install
 There's no installation necessary for this. To run the application, follow these steps:
 - Navigate to `GroceryCo.Kiosk\bin\x86\Release`
