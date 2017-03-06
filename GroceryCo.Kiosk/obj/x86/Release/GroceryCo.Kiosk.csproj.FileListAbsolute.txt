@@ -1,1 +1,0 @@
-D:\Documents\Projects\GroceryCo\GroceryCo-Kiosk\GroceryCo.Kiosk\bin\x86\Release\GroceryCo.exe.config
