@@ -28,6 +28,7 @@ Since the Database will be empty in the beginning, the program will create a new
 - GroceryCo.exe
   - GroceryCo.Inventory.db
   - Inventory.txt
+  - System.Data.SQLite.dll
 ```
 The Database will contain 1 table with the fields `UPC`, `Name`, `Price`, `Count`.
 
