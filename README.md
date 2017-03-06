@@ -18,9 +18,13 @@ This system is based off the MVC pattern and has a Controller class that connect
 ### Dependencies
 - SQLite - A serverless database used for storing Business Objects.
 
+### Design Decisions
+- Model View Controller Pattern
+- Since this system will be implemented on a single Kiosk machine and will only be operated by a single person at a time, the Singleton Pattern is implemented to enforce a single instance of each of the MVC component to prevent anything using the system to allow having multiple components to exist in a single Kiosk.
+
 ## Install
 There's no installation necessary for this. To run the application, follow these steps:
-- Navigate to GroceryCo.Kiosk\bin\x86\Release
+- Navigate to `GroceryCo.Kiosk\bin\x86\Release`
 - Using a command line, run the `GroceryCo` executable file.
 - It will ask for the directory of the text file that will contain UPC "Bar Codes" that the Kiosk will use to scan. Enter the directory of the text file containing UPC codes when prompted.
 After that, it should scan through all the UPC codes and gets the appropriate information from a database and prints out a receipt.
