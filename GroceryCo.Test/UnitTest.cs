@@ -73,5 +73,50 @@ namespace GroceryCo.Test
 			fromInventory = controllerInstance.GetProductByUPC(333);
 			Assert.AreEqual(toCompare3.Price, fromInventory.Price);
 		}
+
+		[TestMethod]
+		public void TotalPriceWithPromotion1()
+		{
+			// Buy 3 Apples for $2.00
+			controllerInstance.ScanProductUPC(toCompare1.UPC);
+			controllerInstance.ScanProductUPC(toCompare1.UPC);
+			controllerInstance.ScanProductUPC(toCompare1.UPC);
+			Assert.AreEqual(2, (float)controllerInstance.CheckOut() / 100);
+		}
+
+		[TestMethod]
+		public void TotalPriceWithPromotion2()
+		{
+			// Buy 2 Bananas Get 1 for 50% Off
+			controllerInstance.ScanProductUPC(toCompare2.UPC);
+			controllerInstance.ScanProductUPC(toCompare2.UPC);
+			controllerInstance.ScanProductUPC(toCompare2.UPC);
+			Assert.AreEqual(2.5, (float)controllerInstance.CheckOut()/100);
+		}
+
+		[TestMethod]
+		public void TotalPriceWithPromotion3()
+		{
+			controllerInstance.ScanProductUPC(toCompare1.UPC);
+			controllerInstance.ScanProductUPC(toCompare1.UPC);
+			controllerInstance.ScanProductUPC(toCompare2.UPC);
+			controllerInstance.ScanProductUPC(toCompare3.UPC);
+			controllerInstance.ScanProductUPC(toCompare1.UPC); //SALE
+			controllerInstance.ScanProductUPC(toCompare3.UPC);
+			controllerInstance.ScanProductUPC(toCompare2.UPC);
+			controllerInstance.ScanProductUPC(toCompare2.UPC); //SALE
+			controllerInstance.ScanProductUPC(toCompare3.UPC);
+			Assert.AreEqual(7.5, (float)controllerInstance.CheckOut() / 100);
+		}
+
+		[TestMethod]
+		public void TotalPriceWithoutPromotion1()
+		{
+			//Oranges have Promotions disabled
+			controllerInstance.ScanProductUPC(toCompare3.UPC);
+			controllerInstance.ScanProductUPC(toCompare3.UPC);
+			controllerInstance.ScanProductUPC(toCompare3.UPC);
+			Assert.AreEqual(3, (float)controllerInstance.CheckOut() / 100);
+		}
 	}
 }

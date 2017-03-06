@@ -51,7 +51,7 @@ namespace GroceryCo.Models
 				case 111:
 					//Buy 3 Apples for $2.00
 					if (promoStatus["Buy 3 Apples for $2.00"] && purchaseCount[toCheck.UPC] % 3 == 0)
-						toCheck.Discount = (toCheck.Price * 2) + 2;
+						toCheck.Discount = (toCheck.Price * 3) - 200;
 					break;
 
 					//Buy 2 Banana for Half Off
