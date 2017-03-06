@@ -28,7 +28,6 @@ namespace GroceryCo.Controllers
 			{
 				controllerInstance = new GroceryCoController();
 			}
-			viewInstance.PrintWelcomeScreen();
 			return controllerInstance;
 		}
 
@@ -42,6 +41,34 @@ namespace GroceryCo.Controllers
 			modelInstance = GroceryCoInventory.GetInstance("GroceryCo.Inventory.db");
 		}
 
+		public void ShowMainMenu()
+		{
+			int menuChoice;
+			do
+			{
+				menuChoice = System.Convert.ToInt32(viewInstance.PrintMainMenu());
+				switch (menuChoice)
+				{
+					case 1:
+						ReadProductList(viewInstance.GetDirectoryInput());
+						CheckOut();
+						return;
+
+					case 2:
+						string toToggle;
+						do
+						{
+							toToggle = viewInstance.PrintPromoMenu(modelInstance.GetAllPromotions());
+							if (!toToggle.Equals("0"))
+							{
+								modelInstance.TogglePromotion(toToggle);
+							}
+						} while (!toToggle.Equals("0"));
+						break;
+				}
+			} while (menuChoice != 0);
+		}
+
 		/// <summary>
 		/// The <c>ReadProductList</c> method is used to get the text file that lists the products
 		/// being "scanned" by the kiosk and for each of those items, we get the information and add
@@ -51,23 +78,30 @@ namespace GroceryCo.Controllers
 		/// products being scanned, but based on the requirements, the products must be scanned using
 		/// the product name.
 		/// </summary>
-		public void ReadProductList()
+		public void ReadProductList(string productDirectory)
 		{
-			string directoryInput = viewInstance.GetDirectoryInput();
-
-			string[] lines = System.IO.File.ReadAllLines(System.IO.Path.GetFullPath(directoryInput));
-			foreach (string line in lines)
+			viewInstance.PrintWelcomeScreen();
+			try
 			{
-				Product toScan = GetProductByName(line);
-				if(toScan == null)
+				string[] lines = System.IO.File.ReadAllLines(System.IO.Path.GetFullPath(productDirectory));
+				foreach (string line in lines)
 				{
-					viewInstance.PrintProductNotFound(line);
-				}
-				else
-				{
-					ScanProductUPC(toScan.UPC);
+					Product toScan = GetProductByName(line);
+					if (toScan == null)
+					{
+						viewInstance.PrintProductNotFound(line);
+					}
+					else
+					{
+						ScanProductUPC(toScan.UPC);
+					}
 				}
 			}
+			catch(System.IO.FileNotFoundException errorEvent)
+			{
+				//No products will be "scanned".
+			}
+			
 		}
 
 		/// <summary>

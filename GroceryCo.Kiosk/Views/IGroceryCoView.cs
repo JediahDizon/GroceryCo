@@ -1,14 +1,12 @@
 ﻿using GroceryCo.BusinessObjects;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 namespace GroceryCo.Views
 {
 	interface IGroceryCoView
 	{
 		void PrintWelcomeScreen();
-		string MainMenu();
-		string PromoMenu();
+		string PrintMainMenu();
+		string PrintPromoMenu(Dictionary<string, bool> toPrint);
 		string GetDirectoryInput();
 		void PrintProduct(Product toPrint);
 		void PrintVoidItem(Product toPrint);

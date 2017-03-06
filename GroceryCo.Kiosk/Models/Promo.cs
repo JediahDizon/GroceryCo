@@ -9,7 +9,6 @@ namespace GroceryCo.Models
 	/// </summary>
 	class Promo
 	{
-
 		Dictionary<int, int> purchaseCount;
 		Dictionary<string, bool> promoStatus;
 
@@ -90,6 +89,16 @@ namespace GroceryCo.Models
 		public void Clear()
 		{
 			purchaseCount.Clear();
+		}
+
+		public Dictionary<string, bool> GetAllPromotions()
+		{
+			return promoStatus;
+		}
+
+		public void TogglePromotion(string toToggle)
+		{
+			promoStatus[toToggle] = !promoStatus[toToggle];
 		}
 	}
 }

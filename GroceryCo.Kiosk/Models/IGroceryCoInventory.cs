@@ -1,4 +1,5 @@
 ﻿using GroceryCo.BusinessObjects;
+using System.Collections.Generic;
 
 namespace GroceryCo.Models
 {
@@ -9,6 +10,7 @@ namespace GroceryCo.Models
 		Product GetProductByUPC(int productUPC);
 		Product GetProductByName(string productName);
 		Product[] GetAllProducts();
+		Dictionary<string, bool> GetAllPromotions();
 		void AddToCart(Product toAdd);
 		Product RemoveFromCart(Product toRemove);
 		int CheckOut();

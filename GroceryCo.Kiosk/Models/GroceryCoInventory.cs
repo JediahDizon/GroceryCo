@@ -3,6 +3,7 @@ using GroceryCo.BusinessObjects;
 using System;
 using System.Collections;
 using System.IO;
+using System.Collections.Generic;
 
 namespace GroceryCo.Models
 {
@@ -182,6 +183,16 @@ namespace GroceryCo.Models
 			{
 				return toReturn = new Product[0];
 			}
+		}
+		
+		public Dictionary<string, bool> GetAllPromotions()
+		{
+			return productPromo.GetAllPromotions();
+		}
+
+		public void TogglePromotion(string toToggle)
+		{
+			productPromo.TogglePromotion(toToggle);
 		}
 
 		/// <summary>

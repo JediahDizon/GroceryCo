@@ -1,5 +1,6 @@
 ﻿using System;
 using GroceryCo.BusinessObjects;
+using System.Collections.Generic;
 
 namespace GroceryCo.Views
 {
@@ -24,23 +25,58 @@ namespace GroceryCo.Views
 
 		}
 
-		public string MainMenu()
+		public string PrintMainMenu()
 		{
-			System.Console.WriteLine("1\tCheckout Products...");
-			System.Console.WriteLine("2\tSales and Promo...");
-			System.Console.WriteLine("3\tExit");
-			return System.Console.ReadLine();
+			System.Console.Clear();
+			System.Console.WriteLine("| --------- |");
+			System.Console.WriteLine("| MAIN MENU | ");
+			System.Console.WriteLine("| --------- |");
+			System.Console.WriteLine("0 - Exit");
+			System.Console.WriteLine("1 - Checkout Products...");
+			System.Console.WriteLine("2 - Sales and Promo...");
+			System.Console.WriteLine("");
+			System.Console.Write("Selection: ");
+			string toReturn = System.Console.ReadLine();
+			return toReturn;
 		}
 
-		public string PromoMenu()
+		public string PrintPromoMenu(Dictionary<string, bool> toPrint)
 		{
-			return null;
+			List<string> keyList = new List<string>(toPrint.Keys);
+
+			System.Console.Clear();
+			System.Console.WriteLine("| ---------- |");
+			System.Console.WriteLine("| PROMOTIONS |");
+			System.Console.WriteLine("| ---------- |");
+			System.Console.WriteLine(string.Format("{0} - {1,-30}", 0, "Go Back..."));
+			for (int i = 0; i < keyList.Count; i++)
+			{
+				System.Console.WriteLine(string.Format("{0} - {1,-30}\t{2}", i + 1, keyList[i], toPrint[keyList[i]] ? "Active" : "Not Active"));
+			}
+			System.Console.WriteLine("");
+			System.Console.Write("Promo to Toggle: ");
+			int userInput = System.Convert.ToInt32(System.Console.ReadLine());
+			if (userInput == 0)
+			{
+				return "" + userInput;
+			}
+			else
+			{
+				return keyList[userInput - 1];
+			}
 		}
 
 		public string GetDirectoryInput()
 		{
+			System.Console.Clear();
+			System.Console.WriteLine("| --------- |");
+			System.Console.WriteLine("| CHECK OUT |");
+			System.Console.WriteLine("| --------- |");
+			System.Console.WriteLine("");
 			System.Console.Write("Item List Directory: ");
-			return System.Console.ReadLine();
+			string toReturn = System.Console.ReadLine();
+			System.Console.WriteLine("");
+			return toReturn;
 		}
 
 		public void PrintWelcomeScreen()
