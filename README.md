@@ -1,4 +1,4 @@
-# GroceryCo Self-Checkout Kiosk System
+# GroceryCo Self-Checkout
 A metaphorical supermarket company named "GroceryCo" hired a software developer to make a kiosk checkout system for their stores. The system lets customers choose to perform a self-checkout so that when they are feeling generous, they can let the people like those with reduced mobility go to cashiers while they use the system to checkout their items themselves.
 
 > It's 2017! You can never stop the progress of machines!
@@ -6,14 +6,23 @@ A metaphorical supermarket company named "GroceryCo" hired a software developer 
 > — GroceryCo CEO
 
 ## Table of Contents
+- [Documentation](#Documentation)
 - [Install](#install)
 - [Security](#security)
 - [Contribute](#contribute)
 
+## Documentation
+### Overview
+This system is based off the MVC pattern and has a Controller class that connects the View and the Model together. The Controller passes around a Product object that contains information about the product being scanned including it's UPC, Name, Price, and Discount if applicable. That product can be used to Show/Add/Modify/Delete the same product from the Model that connects to a Database.
+
+### Dependencies
+- SQLite - A serverless database used for storing Business Objects.
+
 ## Install
 There's no installation necessary for this. To run the application, follow these steps:
+- Navigate to GroceryCo.Kiosk\bin\x86\Release
 - Using a command line, run the `GroceryCo` executable file.
-- It will ask for the directory of the text file that will contain UPC "Bar Codes" that the Kiosk will use to scan. Enter the directory when prompted.
+- It will ask for the directory of the text file that will contain UPC "Bar Codes" that the Kiosk will use to scan. Enter the directory of the text file containing UPC codes when prompted.
 After that, it should scan through all the UPC codes and gets the appropriate information from a database and prints out a receipt.
 
 ## Security
