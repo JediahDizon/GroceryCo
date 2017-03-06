@@ -207,7 +207,7 @@ namespace GroceryCo.Models
 
 		/// <summary>
 		/// The <c>ToRemove</c> function will remove the product from the cart and then return the Product that was removed. This way, customers
-		/// can remove an item that they may have accidentally scanned, while preventing people from voiding an item that weren't in their cart
+		/// can remove an item that they may have accidentally scanned, as well as preventing people from voiding an item that weren't in their cart
 		/// in the first place.
 		/// </summary>
 		/// <param name="toRemove">The <c>Product</c> to remove.</param>

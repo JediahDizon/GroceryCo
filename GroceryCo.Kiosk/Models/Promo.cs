@@ -91,11 +91,20 @@ namespace GroceryCo.Models
 			purchaseCount.Clear();
 		}
 
+		/// <summary>
+		/// The <c>GetAllPromotions</c> function will return all the promotions regardless if they are active or not.
+		/// </summary>
+		/// <returns>A <c>Dictionary</c> that maps the name of the promo with it's active/inactive state.</returns>
 		public Dictionary<string, bool> GetAllPromotions()
 		{
 			return promoStatus;
 		}
 
+		/// <summary>
+		/// The <c>TogglePromotion</c> will enable/disable the promotion depending on the iitial state. This is how GroceryCo marketing team 
+		/// will manage the promotions.
+		/// </summary>
+		/// <param name="toToggle">The key from the Dictionary whose state will be toggled.</param>
 		public void TogglePromotion(string toToggle)
 		{
 			promoStatus[toToggle] = !promoStatus[toToggle];
