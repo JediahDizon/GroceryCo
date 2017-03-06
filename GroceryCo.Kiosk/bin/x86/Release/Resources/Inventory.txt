@@ -1,3 +1,0 @@
-﻿111 Apple 75
-222 Orange 100
-333 Banana 100

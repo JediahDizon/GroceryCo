@@ -91,7 +91,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessObjects\Promo.cs" />
+    <Compile Include="Models\Promo.cs" />
     <Compile Include="BusinessObjects\IProduct.cs" />
     <Compile Include="Models\IGroceryCoInventory.cs" />
     <Compile Include="Models\GroceryCoInventory.cs" />

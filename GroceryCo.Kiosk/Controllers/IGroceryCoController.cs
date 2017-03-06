@@ -8,6 +8,7 @@ namespace GroceryCo.Controllers
 		void VoidItem(int productUPC);
 		void CheckOut();
 		Product GetProductByUPC(int productUPC);
+		Product GetProductByName(string productName);
 		Product[] GetAllProducts();
 	}
 }

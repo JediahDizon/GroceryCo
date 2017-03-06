@@ -1,0 +1,5 @@
+﻿111 Apple 75
+222 Orange 100
+333 Banana 100
+444 Strawberry 150
+555 Cucumber 130

@@ -7,6 +7,8 @@ namespace GroceryCo.Views
 	interface IGroceryCoView
 	{
 		void PrintWelcomeScreen();
+		string MainMenu();
+		string PromoMenu();
 		string GetDirectoryInput();
 		void PrintProduct(Product toPrint);
 		void PrintVoidItem(Product toPrint);
