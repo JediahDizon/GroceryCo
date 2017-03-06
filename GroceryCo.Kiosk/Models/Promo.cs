@@ -54,9 +54,9 @@ namespace GroceryCo.Models
 						toCheck.Discount = (toCheck.Price * 3) - 200;
 					break;
 
-					//Buy 2 Banana for Half Off
+					//Buy 2 Bananas and Get 1 for Half Off
 				case 222:
-					if (promoStatus["Buy 2 Bananas Get 1 for %50 Off"] && purchaseCount[toCheck.UPC] % 2 == 0)
+					if (promoStatus["Buy 2 Bananas Get 1 for %50 Off"] && purchaseCount[toCheck.UPC] % 3 == 0)
 						toCheck.Discount = toCheck.Price / 2;
 					break;
 
