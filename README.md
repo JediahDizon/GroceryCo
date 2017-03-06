@@ -8,7 +8,7 @@ A metaphorical supermarket company named "GroceryCo" hired a software developer 
 ## Table of Contents
 - [Documentation](#documentation)
 - [Install](#install)
-- [IDE](#IDE)
+- [IDE](#ide)
 - [Security](#security)
 - [Contribute](#contribute)
 
