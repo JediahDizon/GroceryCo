@@ -30,7 +30,9 @@ There's no installation necessary for this. To run the application, follow these
 After that, it should scan through all the UPC codes and gets the appropriate information from a database and prints out a receipt.
 
 ### Sample Run
-![TestRun](Test Run.png)
+![Main Menu](Test Runs/Main Menu.png)
+![Promotions](Test Runs/Promotions.png)
+![Check Out](Test Runs/Checkout.png)
 
 ## Security
 Considering the complexity of a Security that works, its essential to implement a robust security. Otherwise, it's just a waste of time that could have been used for productivity. Knowing this is a timed project, I simply used most of my time to learn C# programming and developing the core functionalities of the system.
