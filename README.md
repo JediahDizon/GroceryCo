@@ -6,8 +6,9 @@ A metaphorical supermarket company named "GroceryCo" hired a software developer 
 > — GroceryCo CEO
 
 ## Table of Contents
-- [Documentation](#Documentation)
+- [Documentation](#documentation)
 - [Install](#install)
+- [IDE](#ide)
 - [Security](#security)
 - [Contribute](#contribute)
 
@@ -32,6 +33,10 @@ Since the Database will be empty in the beginning, the program will create a new
 ```
 The Database will contain 1 table with the fields `UPC`, `Name`, `Price`, `Count`.
 
+### Testing
+![Test Results](Images/Test Results.PNG)
+
+
 ## Install
 There's no installation necessary for this. To run the application, follow these steps:
 - Navigate to `GroceryCo.Kiosk\bin\x86\Release`
@@ -40,9 +45,9 @@ There's no installation necessary for this. To run the application, follow these
 After that, it should scan through all the UPC codes and gets the appropriate information from a database and prints out a receipt.
 
 ### Sample Run
-![Main Menu](Test Runs/Main Menu.png)
-![Promotions](Test Runs/Promotions.png)
-![Check Out](Test Runs/Checkout.png)
+![Main Menu](Images/Main Menu.png)
+![Promotions](Images/Promotions.png)
+![Check Out](Images/Checkout.png)
 
 ## IDE
 You can open this as a Visual Studio Project using the `GroceryCo.sln` file located in the root of this Visual Studio Solution. When running inside Visual Studio environment, make sure to target x86 as your hardware.
