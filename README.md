@@ -20,7 +20,7 @@ This system is based off the MVC pattern and has a Controller class that connect
 
 ## Install
 There's no installation necessary for this. To run the application, follow these steps:
-- Navigate to GroceryCo.Kiosk\bin\x86\Release
+- Navigate to `GroceryCo.Kiosk\bin\x86\Release`
 - Using a command line, run the `GroceryCo` executable file.
 - It will ask for the directory of the text file that will contain UPC "Bar Codes" that the Kiosk will use to scan. Enter the directory of the text file containing UPC codes when prompted.
 After that, it should scan through all the UPC codes and gets the appropriate information from a database and prints out a receipt.
