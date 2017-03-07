@@ -49,7 +49,7 @@ After that, it should scan through all the UPC codes and gets the appropriate in
 ![Checkout](Images/Checkout.png)
 
 ## IDE
-You can open this as a Visual Studio Project using the `GroceryCo.sln` file located in the root of this Visual Studio Solution. When running inside Visual Studio environment, make sure to target x86 as your hardware.
+You can open this as a Visual Studio Project using the `GroceryCo.sln` file located in the root of this Visual Studio Solution. When running inside Visual Studio environment, make sure to target `x86` as your hardware.
 
 ## Security
 Considering the complexity of a Security that works, its essential to implement a robust security. Otherwise, it's just a waste of time that could have been used for productivity. Knowing this is a timed project, I simply used most of my time to learn C# programming and developing the core functionalities of the system.
