@@ -34,9 +34,6 @@ The Database will be non-existent in the beginning. The program will create a ne
 The Database will contains 1 table with the fields `UPC`, `Name`, `Price`, `Count`. In the future, Promotions and Sales will also be stored in a table.
 
 ### Testing
-![Main Menu](Images/Main Menu.PNG)
-![Promotion](Images/Promotion.PNG)
-![Checkout](Images/Checkout.png)
 ![Test Results](Images/Test Results.PNG)
 
 ## Install
@@ -47,9 +44,9 @@ There's no installation necessary for this. To run the application, follow these
 After that, it should scan through all the UPC codes and gets the appropriate information from a database and prints out a receipt.
 
 ### Sample Run
-![Main Menu](Images/Main Menu.png)
-![Promotions](Images/Promotions.png)
-![Check Out](Images/Checkout.png)
+![Main Menu](Images/Main Menu.PNG)
+![Promotion](Images/Promotion.PNG)
+![Checkout](Images/Checkout.png)
 
 ## IDE
 You can open this as a Visual Studio Project using the `GroceryCo.sln` file located in the root of this Visual Studio Solution. When running inside Visual Studio environment, make sure to target x86 as your hardware.
