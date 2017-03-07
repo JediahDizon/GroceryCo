@@ -45,7 +45,7 @@ After that, it should scan through all the UPC codes and gets the appropriate in
 
 ### Sample Run
 ![Main Menu](Images/Main Menu.png)
-![Promotion](Images/Promotion.png)
+![Promotion](Images/Promotions.png)
 ![Checkout](Images/Checkout.png)
 
 ## IDE
