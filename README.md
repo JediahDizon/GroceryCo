@@ -44,7 +44,7 @@ There's no installation necessary for this. To run the application, follow these
 After that, it should scan through all the UPC codes and gets the appropriate information from a database and prints out a receipt.
 
 ### Sample Run
-![Main Menu](Images/Main Menu.png)
+![MainMenu](Images/Main Menu.png)
 ![Promotion](Images/Promotions.png)
 ![Checkout](Images/Checkout.png)
 
