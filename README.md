@@ -34,7 +34,7 @@ The Database will be non-existent in the beginning. The program will create a ne
 The Database will contains 1 table with the fields `UPC`, `Name`, `Price`, `Count`. In the future, Promotions and Sales will also be stored in a table.
 
 ### Testing
-![Test Results](Images/Test Results.PNG)
+![Test Results](Images/Test%20Results.PNG)
 
 ## Install
 There's no installation necessary for this. To run the application, follow these steps:
